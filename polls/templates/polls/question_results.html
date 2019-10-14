@@ -1,0 +1,9 @@
+Results for question with id {{question_id}}:
+<br>Question:
+<br>{{question}}
+<br><br>Results:
+<br><br>
+{% for choice in question.choice_set.all %}
+    {{ choice.choice_text }} <br>
+    <label>Votes: {{ choice.votes }}</label> <br>
+{% endfor %}
